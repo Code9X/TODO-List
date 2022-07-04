@@ -1,0 +1,34 @@
+{APP.js}
+
+import {db} from './firebase-config'
+import {uid} from 'uid'
+import {set,ref} from 'firebase/database'
+import {useState} from 'react'
+
+function App(){
+    const [todo, setTodo] = useState("");
+
+    const handleTodoChange = (e) => {
+        setTodo(e.target.value);
+    };
+
+    //CREATE/WRITE
+    function writeToDataBase() {
+        const uuid = uid();
+    set(ref(db, `/${uuid}`), {
+        todo,
+        uuid,
+    });
+
+    setTodo("");
+    };
+
+    return(
+        <div className='app'>
+        <input type={Text} value={todo} onChange={handleTodoChange} ></input>
+        <button onClick={writeToDataBase} >submit</button>
+        </div>
+    )
+}
+
+export default App;

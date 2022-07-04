@@ -1,0 +1,13 @@
+Go to Google
+search firebase
+go to console - create a project
+click the " </> " symbol 
+go to settings-project settings- switch 'SDK setup and configuration' to config - copy the configuration
+
+Now look at 'firebase-config.txt'
+
+After that Go to Real-time Database
+Create Database - locked mode - rule -change false to true for .read & .write
+now go to data.
+
+Now look at 'App.txt'

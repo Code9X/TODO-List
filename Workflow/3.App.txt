@@ -1,0 +1,25 @@
+npm i uid
+import {db} from './firebase-config'
+import {uid} from 'uid'
+import {set,ref} from 'firebase/database'
+
+in the button we gave a function called 'writeToDataBase'
+    const writeToDataBase=()=>{
+        const uuid = uid()
+        set(ref(db,'/$(uuid)'),{
+            todo,   //todo : todo  since they are same we write todo only
+            uuid,   //uuid : uuid  since they are same we write uuid only
+        })
+    }
+///////////////////////////////////////////////////////////////////////////////
+        
+        Handle Todo Change
+import {useState,useEffect} from 'react'
+
+const[todo,setTodo]=useState('')
+
+    const handleTodoChange =(e)=>{
+        setTodo(e.target.value)
+    }
+
+<input type={Text} value={todo} onChange={handleTodoChange}></input>

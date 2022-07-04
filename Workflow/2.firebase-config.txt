@@ -1,0 +1,10 @@
+first install ,npm i firebase
+
+import {initializeApp} from 'firebase/app'
+import {getDatabase} from "firebase/database"
+
+copy paste the config from firebase
+
+const app =initializeApp(firebaseConfig);
+export const db= getDatabase(app);
+
