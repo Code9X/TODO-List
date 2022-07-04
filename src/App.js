@@ -59,11 +59,12 @@ function App(){
     const handleDelete = (todo) => {
         remove(ref(db, `/${todo.uuid}`));
         };
-
+        
     return(
         <div className='App'>
-            <img className='bg' src='https://i.pinimg.com/474x/4d/bd/18/4dbd181101ee8856847904d70f1e6e88.jpg' alt='bg'></img>
+            <img className='bg' src={require('./Images/background.jpg')} alt='bg'></img>
                 <div className='input' >
+                <h1 className='title'>TO DO</h1>    
                 <input className='search-bar' type={Text} value={todo} onChange={handleTodoChange} placeholder='Add a task' ></input>
                 {Edit ? (
                 <>
@@ -93,5 +94,3 @@ function App(){
         }
 
 export default App;
-
-

@@ -15,7 +15,14 @@
     left: 30%;
 }
 
+.title {
+    color: #fff;
+    left: 145px;
+    position: relative;
+}
+
 .search-bar {
     height: 20px;
     width: 400px;
+    position: relative;
 }
