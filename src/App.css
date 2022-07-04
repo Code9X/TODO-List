@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.input {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+
+.search-bar {
+    height: 20px;
+    width: 400px;
+}
