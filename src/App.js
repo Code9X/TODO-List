@@ -1,3 +1,4 @@
+import React from 'react'
 import {db} from './firebase-config'
 import {uid} from 'uid'
 import {set,ref, onValue,remove,update} from 'firebase/database'
@@ -63,31 +64,35 @@ function App(){
     return(
         <div className='App'>
             <img className='bg' src={require('./Images/background.jpg')} alt='bg'></img>
+            
                 <div className='input' >
-                <h1 className='title'>TO DO</h1>    
-                <input className='search-bar' type={Text} value={todo} onChange={handleTodoChange} placeholder='Add a task' ></input>
-                {Edit ? (
-                <>
-                    <button onClick={handleSubmitChange}>Submit Change</button>
-                    <button
-                    onClick={() => {
-                        setEdit(false);
-                        setTodo("");
-                    }}
-                    >
-                    X
-                    </button>
-                </>
+                    <h1 className='title'><span>TO DO</span></h1> 
+                    <input className='search-bar' type={Text} value={todo} onChange={handleTodoChange} placeholder='Add a task' ></input>
+
+                    {Edit ? (
+                    <>
+                    <button className='Change-button' onClick={handleSubmitChange}>Change</button>
+                    <button className= "X-button"onClick={() => {setEdit(false);setTodo("");}} > X </button>
+                    </>
                 ) : (
-                    <button onClick={writeToDataBase} >submit</button>
+                    <button className='submit-button' onClick={writeToDataBase} >submit</button>
                 )}
                 {todos.map(todo=>(
                     <>
-                        <h1>{todo.todo}</h1>
-                        <button onClick={() => handleUpdate(todo)}>Update</button>
-                        <button onClick={() => handleDelete(todo)}>Delate</button>
+                        <h1 className='list'>
+                            <ul>
+                                <li><span >{todo.todo}</span></li>
+                            </ul>
+                        </h1>
+                        <div className='up-del'>
+                            <button className='update-button' onClick={() => handleUpdate(todo)}>Update</button>
+                            <button className='delate-button' onClick={() => handleDelete(todo)}>Delate</button>
+                        </div>
                     </>
                 ))}
+                </div>
+                <div className='footer'>
+                    <h5><span>ⓒ 2022 Sebin. All Rights Reserved</span></h5>
                 </div>
         </div>
             )

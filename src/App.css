@@ -13,16 +13,112 @@
     position: absolute;
     top: 35%;
     left: 30%;
+    width: 500px;
+    height: 200px;
 }
 
 .title {
     color: #fff;
-    left: 145px;
-    position: relative;
+    margin-left: 150px;
+}
+
+.title:hover {
+    color: rgb(0, 0, 0);
 }
 
 .search-bar {
     height: 20px;
     width: 400px;
     position: relative;
+}
+
+/* Buttons */
+.submit-button {
+    cursor: pointer;
+    height: 25px;
+    width: 60px;
+    margin-left: 5px;
+    color: green;
+    background-color: white;
+    border-radius: 16px;
+    border: 6px;
+    border-color: green;
+    transition-duration: 0.4s;
+}
+
+.submit-button:hover {
+    background: green;
+    color: white;
+}
+
+.Change-button {
+    cursor: pointer;
+    height: 25px;
+    width: 50px;
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 8px;
+}
+
+.Change-button:hover {
+    background: purple;
+    color: white;
+}
+
+.X-button {
+    cursor: pointer;
+    height: 25px;
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 6px;
+}
+
+.X-button:hover {
+    background: red;
+    color: white;
+}
+
+.update-button {
+    cursor: pointer;
+    border: 0px;
+    border-radius: 2px;
+}
+
+.update-button:hover {
+    background: orange;
+    color: white;
+}
+
+.delate-button {
+    cursor: pointer;
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 2px;
+}
+
+.delate-button:hover {
+    background: red;
+    color: white;
+}
+
+.up-del {
+    margin-left: 50px;
+}
+
+.list {
+    margin-left: 50px;
+    margin-top: 12px;
+    color: white;
+}
+
+.list:hover {
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 10px;
+    width: 900px;
+    bottom: 5px;
+    color: white;
 }
