@@ -115,10 +115,31 @@
     color: black;
 }
 
-.footer {
+.checkBox {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 16px;
+}
+
+.checkedTodo {
+    text-decoration: underline;
+}
+
+
+.itemsChecked {
+    margin-top: 10px;
+}
+
+.footer1 {
     position: fixed;
     left: 10px;
     width: 900px;
     bottom: 5px;
     color: white;
+}
+
+.footer2 {
+    left: 960px;
+    position: fixed;
+    top: 590px;
 }
